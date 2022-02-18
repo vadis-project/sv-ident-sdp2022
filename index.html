@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.88.1">
+  <title>SV-Ident 2022</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/grid/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="./bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 1%;
+      padding: 1%;
+    }
+
+    /* Style the header */
+    .header {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      padding: 0%;
+      margin: 0%;
+    }
+
+    /* Left and right column */
+    .column.side {
+      margin: 1%;
+      width: 21%;
+      align-self: right;
+    }
+
+    .column.side2 {
+      margin: 1%;
+      width: 30%;
+      align-self: right;
+    }
+
+    .column.side3 {
+      margin: 1%;
+      width: 47%;
+      align-self: right;
+    }
+
+    .rcolumn.rside {
+      float: right;
+      width: 25%;
+      align-content: right;
+      align-self: right;
+    }
+
+    /* Middle column */
+    .column.lefter {
+      width: 75%;
+      margin-right: 2%;
+    }
+
+    .column.lefter2 {
+      width: 65%;
+      margin-right: 2%;
+    }
+
+    .column.lefter3 {
+      width: 47%;
+      margin: 1%;
+    }
+
+    .wide.whole {
+      width: 100%;
+      height: 100px;
+    }
+
+    .fonts.small {
+      font-size: small;
+    }
+
+    .head.left1 {
+      align-content: center;
+      margin-left: 1%;
+      margin-top: 1.5rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width:600px) {
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>SV-Ident 2022: </h1>
+  <h1>Survey Variable Identification
+    in Social Science Publications</h1>
+
+  <p class="lead">Scholarly Document Processing 2022</p>
+
+
+
+  <div style="overflow:hidden; margin: 2%; ">
+    <h4 class="mt-4">Overview</h4>
+    <div class="column lefter">
+
+
+      <p>
+        Social sciences literature often use and reference survey dataset. Typically, a survey dataset has hundreds of
+        items or questions called
+        as <i>survey variables</i>. Social sciences papers only focus
+        on specific set of these variables. In order to establish links between
+        data and publications on a fine-grained level it is therefore
+        necessary to link not only on study name level but also on
+        the level of survey variables.
+      </p>
+      <p>
+        While a survey dataset that is used in a scientific publication is typically referenced explicitly in-text using
+        a bibliographic citation (e.g., Author et al.),
+        individual survey items or questions, also called <i>survey variables</i>, are often only referenced
+        ambiguously.
+        For example, a survey variable may be referenced in many different ways. Below we only list four types of
+        references (please see the <a href="https://github.com/vadis-project/shared-task/"
+          class="text-decoration-none">annotation guideline v1</a> for more examples).
+        Example references:</p>
+      <table class="table table-striped fonts small">
+        <thead>
+          <tr>
+            <th scope="col">Reference Type</th>
+            <th scope="col">In-text Reference</th>
+            <th scope="col">Variable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Self-containing reference</td>
+            <td>To test this, we analyzed data on the strength of individuals’ identification with their home town and
+              its inhabitants from the German ALLBUS surveys.</td>
+            <td>Variable label: IDENTIFICATION WITH OWN COMMUNITY</td>
+          </tr>
+          <tr>
+            <td>Quotation of the variable text</td>
+            <td>There is only one item measuring happiness which directly asksthe respondents: ‘If you were to
+              consider your life in general these days, howhappy or unhappy would you say you are, on the whole...
+            </td>
+            <td>Variable question: If you were to consider your life in general these days, how happy or unhappywould
+              you say you are, on the whole...</td>
+          </tr>
+          <tr>
+            <td>Paraphrase of the variable text</td>
+            <td>The second and the third questions come from the ISSP research, where respondents were asked about the
+              influence of religious leaders on <i>people’s votes</i> and the government.</td>
+            <td>Variable question: How much do you agree or disagree with each of the following: Religious leaders
+              should not try to influence <i>how people vote</i> in elections.</td>
+          </tr>
+          <tr>
+            <td>Negative polarity item</td>
+            <td>Victimization and fear of crime are dichotomous, with “1” indicating positive responses to either of
+              the two following questions: “Have you been a victim of theft in the past 3 years?” and “Is there any
+              place in the immediate vicinity in which you <i>fear</i> walking alone at night?</td>
+            <td>Variable question: Is there any area in the immediate vicinity - I mean within a kilometer or so -
+              where you would <i>prefer not to walk</i> alone at night?</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <img class="column side" alt="My Image" src="var_link_schema.png" />
+    <p class="column side" style="font-size: small;">Figure 1: Linking Survey Variable Mentions in Scientific
+      Publications</p>
+
+
+  </div>
+  <div style="overflow:hidden;  margin: 2%;">
+    <div class="container column lefter2">
+
+      <p>
+        In this task, a set of variables of a particular
+        survey and a set sentences from social sciences publications are given and all relevant mentions that refer to
+        one
+        of
+        these variables are expected to be identified. This task splits into two sub-tasks:
+
+
+      </p>
+
+      <p>
+        <strong class="d-inline-block mb-2 text-primary">Task 1 - Variable Detection:</strong> identifying whether the
+        sentence contains a variable mention or not.
+      </p>
+      <p>
+        <strong class="d-inline-block mb-2 text-primary">Task 2 - Variable Disambiguation:</strong> identifying which
+        variable from the vocabulary is specifically mentioned in a certain sentence.
+      </p>
+      <h5 class="mt-4">Examples</h5>
+      <p>
+        In text fragment 1, there are sentences from different social sciences publications. Sentence-1 Authors
+        paraphrases a varible, v278, which is shown in the Figure 2 in . In <strong>Task-1</strong>, the sentence 1 is classified as variable
+        mentioned (1). On the
+        other hand, since there is no variable mention in Sentence-2, it is classified as not variable mentioned(0).
+        Sentence-3
+        summarizes more than one variable in a single sentence the Allbus variables v274, v275, v276 and v277.
+        Therefore, Sentence-3
+        is classified as variable mentioned (1).
+
+      </p>
+      <p>
+        <strong>Task-2</strong> focuses on sentences which mentions variables, these are Sentence-1 and Sentence-3 in our example. For
+        Sentence-1, it is
+        expected to find the specific variable, v278, which mentioned in the sentence. If a sentence mentiones more than
+        one
+        variable, all mentioned variables need to be finded. For example, Sentence-3 can be linked to the Allbus
+        variables v274, v275, v276 and v277
+        All of them have a common main question Do you have any personal
+        contact with foreigners living in Germany? but differ in their respective subquestions, e.g., ...at work?, ...in
+        your neighborhood?
+        etc.
+
+      </p>
+    </div>
+
+    <div class="container column side2">
+
+      <p style="background-color:#f2f2f2; font-size: small; padding: 3%;">
+        Results of more recent public opinion such as the
+        Allbus Survey conducted in 2006 show that the majority of Germans continue to reject the idea of generally
+        granting dual citizenship(1).
+        The policy shift is partly due to steadily declining immigration to Germany(2). Encounters between Germans and
+        foreigners can
+        take place in different spheres of life, at work, in
+        the neighborhood, in the family or in the circle of
+        friends and acquaintances. (3)
+
+      </p>
+      <p style="font-size: small;">Text Fragment 1: Sample Sentences From Publications</p>
+
+      <xmp style="background-color:#f2f2f2; font-size: x-small; ">
+        v_id: v278
+        lang: English
+        survey: ALLBUS_cumulated
+        v_label: OPINION ON DUAL CITIZENSHIP
+        v_topic: Ethnocentrism and Minorities
+        v_question: Using the scale on the card,
+        please indicate the extent to which you
+        agree with each statement.
+        v_subquestion: Foreigners living in Germany
+        should be able to acquire German citizenship
+        without having to give up their own
+        citizenship, dual citizenship should be
+        possible.
+        v_answer a_id="1": Not available
+        ...
+      
+        variable v_id: v274
+        v_label: FOREIGN.,GUEST W.: CONTACT IN OWN FAMILY
+        v_topic: Ethnocentrism and Minorities
+        v_question: Do you have any personal contact with foreigners
+        living in Germany? Specifically...
+        v_subquestion: ...in your own family or close family circle?
+
+        v_id: "v275"
+        v_label: FOREIGN.,GUEST W.: CONTACT AT WORK
+        v_topic: Ethnocentrism and Minorities
+        v_question: Do you have any personal contact with foreigners 
+        living in Germany? Specifically...
+        v_subquestion: ...at work?
+
+        v_id="v276"
+        v_label: FOREIGN.,GUEST W.:CONTACT I.NEIGHBORHOOD
+        v_topic: Ethnocentrism and Minorities
+        v_question: Do you have any personal contact with foreigners 
+        living in Germany? Specifically...
+        v_subquestion: ...in your neighborhood?
+
+        v_id="v277"
+        v_label: FOREIGN.,GUEST W.: CONTACT AMONG FRIENDS
+        v_topic: Ethnocentrism and Minorities
+        v_question: Do you have any personal contact with foreigners 
+        living in Germany? Specifically...
+        v_subquestion: ...among your other friends and acquaintances?
+
+      </xmp>
+      <p style="font-size: small;">Figure 2: Sample Survey Variables</p>
+
+    </div>
+    <h2 class="mt-4">Announcements</h2>
+
+    <p> <strong>20.01.2022:</strong> Website is up. </p>
+
+
+
+    <h2 class="mt-4">Important Dates</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Event</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Training Set Release</td>
+          <td>TBA</td>
+        </tr>
+        <tr>
+          <td>Deadline for Registration</td>
+          <td>TBA</td>
+        </tr>
+        <tr>
+          <td>Test Set Release (Blind)</td>
+          <td>TBA</td>
+        </tr>
+        <tr>
+          <td>System Runs Due</td>
+          <td>TBA</td>
+        </tr>
+        <tr>
+          <td>Preliminary System Reports Due</td>
+          <td>TBA</td>
+        </tr>
+        <tr>
+          <td>Camera-Ready Contributions Due</td>
+          <td>TBA</td>
+        </tr>
+        <tr>
+          <td>Participant Presentations at SDP 2022</td>
+          <td>TBA</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="mt-4">Data</h2>
+
+    <table style="font-size: small;" class="table table-striped">
+      <thead>
+        <tr style="text-align: left;">
+          <th>doc_id</th>
+          <th>text</th>
+          <th>is_variable</th>
+          <th>variable</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4E1K1A-VQOXIJ</td>
+          <td>The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10
+            (very religious) and the number of their children reveals a clear connection.</td>
+          <td>1</td>
+          <td>[580-Yes,1504-Yes,454-No,623-No]</td>
+        </tr>
+        <tr>
+          <td>4E1K1A-VQOXIJ</td>
+          <td>The average number of children ranges from 1.44 for respondents who characterized themselves as
+            non-religious to 1.9 for those who considered themselves very religious.</td>
+          <td>0</td>
+          <td>NoSkip</td>
+        </tr>
+        <tr>
+          <td>4E1K1A-VQOXIJ</td>
+          <td>The rise is clear but not continuous.</td>
+          <td>0</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <table style="font-size: small;" class="table table-striped">
+      <thead>
+        <tr style="text-align: left;">
+          <th>id</th>
+          <th>label</th>
+          <th>topic</th>
+          <th>question</th>
+          <th>answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>veastwest</td>
+          <td>REGION OF INTERVIEW: WEST - EAST</td>
+          <td>Identification variables</td>
+          <td>Does this interview take place on the territory of the old Federal Republic (incl. West Berlin) or on
+            the territory of the former GDR (incl. East Berlin)?</td>
+          <td>Respondents from the old federal states / interview on the territory of the old Federal Republic
+            (incl. West Berlin) ; Respondents from the new federal states / interview on the territory of the former
+            GDR (incl. East Berlin)</td>
+        </tr>
+        <tr>
+          <td>v16</td>
+          <td>SATISFACTION WITH PERFORMANCE OF FED.GOV</td>
+          <td>Political attitudes and participation</td>
+          <td>How satisfied are you - on the whole - with the current performance of the German government?</td>
+          <td>Not available;Very satisfied;Fairly satisfied;Somewhat satisfied;Somewhat dissatisfied;Fairly
+            dissatisfied;Very dissatisfied;Don't know;No answer</td>
+        </tr>
+        <tr>
+          <td>v18</td>
+          <td>SATISFACTION WITH DEMOCRACY IN THE FRG</td>
+          <td>Political attitudes and participation</td>
+          <td>Let's turn to democracy in Germany : Generally speaking how satisfied are you with democracy as
+            practiced in Germany ?</td>
+          <td>Not available;Very satisfied;Fairly satisfied;Somewhat satisfied;Somewhat dissatisfied;Fairly
+            dissatisfied;Very dissatisfied;Don't know;No answer</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      For the full development data please visit the <a href="https://github.com/vadis-project/shared-task"
+        class="text-decoration-none">SV-Ident GitHub repository</a>.
+    </p>
+
+    <div style="overflow:hidden;  ">
+      <h2 class="mt-4">Evaluation</h2>
+      <p>
+        <strong>Task 1: </strong>
+
+        The variable detection task is evaluted using a standard F1-macro.
+      </p>
+      <p>
+        <strong>Task 2: </strong>
+
+        The variable disambiguation task will be evaluted using metrics commonly used in information retrieval and
+        eXtreme Multi-label text Classification (XMC).
+        These include: Precision@k, Recall@k, R-precision, and MAP.
+        <!-- We will use <a href="https://opennir.net/metrics.html">OpenNIR</a> for R-precision and <a href="https://github.com/cvangysel/pytrec_eval">pytrec_eval</a> for the remaining metrics. -->
+        We use (<a href="https://opennir.net/metrics.html">OpenNIR</a>, <a
+          href="https://github.com/terrierteam/ir_measures">ir_measures</a>, <a
+          href="https://github.com/joaopalotti/trectools">trectools</a>) to compute all metrics.
+      </p>
+
+      You can use the evaluation script (<a href="https://github.com/vadis-project/shared-task">evaluate.py</a>) to
+      check the performance of your model on a diverse set of metrics.
+
+      <h2 class="mt-4">Submission</h2>
+
+      <h4 class="mt-4">Rules:</h4>
+
+      <ol>
+        <li>Provide a self-contained jupyter notebook (can be hosted on Colab, Binder, Kaggle, or any other platform)
+          which can be executed to produce the submitted results.</li>
+        <li>Submit the submission file(s) (described below)</li>
+        <li>You are allowed to use external data, but must make available the trained model or provide a script and
+          the data to train the model.</li>
+      </ol>
+
+      The submissions should have the following format:
+
+      <h5 class="mt-4">Task 1</h5>
+
+      <p>The first key is the document ID and the second key represents the sentence has a variable mention as 1,
+        otherwise 0. </p>
+
+      <div class="column lefter3">
+
+        Schema:
+
+        <pre style="background-color:#f2f2f2; font-size: small;">
+              <code>
+              {
+                'DOC_ID': 'LABEL',
+              }</code>
+            </pre>
+      </div>
+      <div class="column side3">
+
+        Example:
+        <pre style="background-color:#f2f2f2; font-size: small;">
+        <code>
+              {
+                '17': '1',
+                '238': '0',
+                ...
+              }
+        </code>
+      </pre>
+      </div>
+
+      <h5 class="mt-4">Task 2</h5>
+
+      <p>The first key is the document ID, the second key the variable ID, and the value the similarity score
+        (lower is more similar) for the variable to the document.</p>
+
+
+      <div class="column lefter3">
+
+        Schema:
+        <pre style="background-color:#f2f2f2; font-size: small;" class="json">
+                <code>
+                {
+                  'DOC_ID': {
+                      'VAR_ID': 'SCORE',
+                  },
+                }</code>
+              </pre>
+      </div>
+      <div class="column side3">
+
+        Example:
+        <pre style="background-color:#f2f2f2;" class="python">
+                        <code>
+                {
+                  '17': {
+                      'v25': 0.0908927470445633,
+                      'v637': 0.10519161820411682,
+                      'v206': 0.08874139934778214,
+                      ...
+                  },
+                  '238': {
+                      'v637': 0.0477452278137207,
+                      'v418': 0.08932048827409744,
+                      'v419': 0.05219722166657448,
+                      ...
+                  },
+                  ...
+                }</code>
+              </pre>
+        </pre>
+      </div>
+
+
+
+
+    </div>
+
+
+
+    <h2 class="mt-4">Organizers</h2>
+
+    <p>This task is organized by the VAriable Detection, Interlinking and Summarization (VADIS) project.</p>
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <div class="row">
+
+  </div>
+
+</body>
+
+</html>
