@@ -53,14 +53,13 @@
       color: black;
     }
 
-    /* Create three equal columns that floats next to each other */
+
     .column {
       float: left;
-      padding: 0%;
+      padding: 1%;
       margin: 0%;
     }
 
-    /* Left and right column */
     .column.side {
       margin: 1%;
       width: 21%;
@@ -142,8 +141,9 @@
     in Social Science Publications</h1>
 
   <!-- <p class="lead">3rd Workshop on Scholarly Document Processing at COILING 2022 </p> -->
-  <p class="lead"><a href="https://sdproc.org/2022/">3rd Workshop on Scholarly Document Processing</a> at <a href="https://coling2022.org/">COLING 2022</a></p>
-  
+  <p class="lead"><a href="https://sdproc.org/2022/">3rd Workshop on Scholarly Document Processing</a> at <a
+      href="https://coling2022.org/">COLING 2022</a></p>
+
 
 
   <div style="overflow:hidden; margin: 2%; ">
@@ -153,12 +153,16 @@
 
       <p>
         Social science literature often use and reference survey datasets. Typically, a survey dataset has hundreds of
-        items or questions, called <i>survey variables</i>. Studies may only focus and reference a specific subset of these variables. 
-        While survey datasets that are used in a publication are typically referenced explicitly in-text using a bibliographic citation, 
-        individual survey variables are often only referenced ambiguously (four examples are shown in Table 1; see the <a href="https://github.com/vadis-project/shared-task/"
-        class="text-decoration-none">annotation guideline v1</a> for more examples).
+        items or questions, called <i>survey variables</i>. Studies may only focus and reference a specific subset of
+        these variables.
+        While survey datasets that are used in a publication are typically referenced explicitly in-text using a
+        bibliographic citation,
+        individual survey variables are often only referenced ambiguously (four examples are shown in Table 1; see the
+        <a href="https://github.com/vadis-project/shared-task/" class="text-decoration-none">annotation guideline v1</a>
+        for more examples).
         <!-- Furthermore, survey variables in one language may be referenced in a publication of another language. -->
-        This lack of explicit linking between individual survey variables and publications limits aggregate analyses and makes comparing different studies non-trivial.
+        This lack of explicit linking between individual survey variables and publications limits aggregate analyses and
+        makes comparing different studies non-trivial.
         Automatic methods for detecting and linking survey variables can be used to solve this problem.
         Initial baselines show promising results, however, challenges remain.
         <!-- such as the availability of datasets and the growing number of variables. -->
@@ -208,14 +212,15 @@
     </div>
 
     <img class="column side" alt="My Image" src="var_link_schema.png" />
-    <p class="column side" style="font-size: small;">Figure 1: Example of linked survey variable mentions in scientific publications</p>
+    <p class="column side" style="font-size: small;">Figure 1: Example of linked survey variable mentions in scientific
+      publications</p>
 
   </div>
-  <div style="overflow:hidden;  margin: 2%;">
-    <div class="container column lefter2">
+  <div class="container column" style="overflow:hidden;  ">
+    <div class="container column">
 
       <p>
-        For this shared task, a system should be built that can identify all relevant variables from English and 
+        For this shared task, a system should be built that can identify all relevant variables from English and
         German social science publications given a set of variables and sentences (including their contexts).
         The shared task is split into two sub-tasks:
       </p>
@@ -228,9 +233,10 @@
         <strong class="d-inline-block mb-2 text-primary">Task 2 - Variable Disambiguation:</strong> identifying which
         variable from a given vocabulary is mentioned in a sentence.
       </p>
-      
+
       <p>
-        Initially, we release a trial dataset, which contains 1227 instances for English and German survey variable mentions.
+        Initially, we release a trial dataset, which contains 1227 instances for English and German survey variable
+        mentions.
         Afterwards, we will release the core dataset (see the timeline below for details).
       </p>
 
@@ -258,10 +264,10 @@
         your neighborhood?
         etc.
 
-      </p>
+      </p> -->
     </div>
 
-    <div class="container column side2">
+    <!--  <div class="container column side2">
 
       <p style="background-color:#f2f2f2; font-size: small; padding: 3%;">
         Results of more recent public opinion such as the
@@ -326,197 +332,212 @@
 
     </div> -->
 
+    <div class="container column">
 
-    <h2 class="mt-4">Announcements</h2>
+      <h2 class="mt-4">Announcements</h2>
 
-    <p> <strong>16.03.2022:</strong> Trial data is released </p>
-    <p> <strong>22.11.2021:</strong> Workshop is accepted </p>
+      <p> <strong>16.03.2022:</strong> Trial data is released </p>
+      <p> <strong>22.11.2021:</strong> Workshop is accepted </p>
 
-    
-    <h2 class="mt-4">Important Dates</h2>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Event</th>
-          <th scope="col">Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Training Set Release</td>
-          <td>TBA</td>
-        </tr>
-        <tr>
-          <td>Deadline for Registration</td>
-          <td>TBA</td>
-        </tr>
-        <tr>
-          <td>Test Set Release (Blind)</td>
-          <td>TBA</td>
-        </tr>
-        <tr>
-          <td>System Runs Due</td>
-          <td>TBA</td>
-        </tr>
-        <tr>
-          <td>Preliminary System Reports Due</td>
-          <td>TBA</td>
-        </tr>
-        <tr>
-          <td>Camera-Ready Contributions Due</td>
-          <td>TBA</td>
-        </tr>
-        <tr>
-          <td>Participant Presentations at SDP 2022</td>
-          <td>TBA</td>
-        </tr>
-      </tbody>
-    </table>
 
-    <h2 class="mt-4">Data</h2>
-    The dataset is made up of the sentences with and without survey variable 
-    mentions (with their respective variable labels) and a vocabulary of survey variables.
-    An example context of three sentences is shown below.
+      <h2 class="mt-4">Important Dates</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Training Set Release</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Deadline for Registration</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Test Set Release (Blind)</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>System Runs Due</td>
+            <td>TBA</td>
+          </tr>
+          <tr>
+            <td>Workshop Papers Due Date</td>
+            <td>July 11, 2022</td>
+          </tr>
+          <tr>
+            <td>Camera-Ready Papers Due</td>
+            <td>September 5, 2022</td>
+          </tr>
+          <tr>
+            <td>Workshop at COLING 2022</td>
+            <td>October 16/17, 2022</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <p style="background-color:#f2f2f2; font-size: small; padding: 1%;">
-    (1) We shall focus on the data from respondents between the ages of 35 and 45 – a group which made substantial decisions with respect to family planning. 
-    (2) Of the 682 individuals in this group, 28.6% were Catholic, 29.7% Evangelical, 2.7% belonged to an independent or other Christian community, and 2.5% to a non-Christian religious community, 36.2% of the respondents were undenominational. 
-    (3) The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10 (very religious) and the number of their children reveals a clear connection.
-    </p>
-<!-- 
-    <table style="font-size: small;" class="table table-striped">
-      <thead>
-        <tr style="text-align: left;">
-          <th>doc_id</th>
-          <th>text</th>
-          <th>is_variable</th>
-          <th>variable</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>4E1K1A-VQOXIJ</td>
-          <td>The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10
-            (very religious) and the number of their children reveals a clear connection.</td>
-          <td>1</td>
-          <td>[580-Yes,1504-Yes,454-No,623-No]</td>
-        </tr>
-        <tr>
-          <td>4E1K1A-VQOXIJ</td>
-          <td>The average number of children ranges from 1.44 for respondents who characterized themselves as
-            non-religious to 1.9 for those who considered themselves very religious.</td>
-          <td>0</td>
-          <td>NoSkip</td>
-        </tr>
-        <tr>
-          <td>4E1K1A-VQOXIJ</td>
-          <td>The rise is clear but not continuous.</td>
-          <td>0</td>
-          <td>No</td>
-        </tr>
-      </tbody>
-    </table> -->
+      <h2 class="mt-4">Data</h2>
+      <p>The dataset is made up of the sentences with and without survey variable
+      mentions (with their respective variable labels) and a vocabulary of survey variables.
+      An example context of three sentences is shown below.</p>
 
-    <p>
-      In the example, sentence (1) does not contain a variable mention while sentences (2) and (3) contain the variables [v732] and [v580, v1504], respectively.
-      The variable data is also provided in Table 2.
-    </p>
-
-    <table style="font-size: small;" class="table table-striped">
-      <thead>
-        <tr style="text-align: left;">
-          <th>id</th>
-          <th>label</th>
-          <th>topic</th>
-          <th>question</th>
-          <th>answer</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>v732</td>
-          <td>RESPONDENT: RELIGIOUS DENOMINATION E</td>
-          <td>ALLBUS-Demography: Details about the respondent</td>
-          <td>May I ask you what religion you belong to?	</td>
-          <td>The German Protestant church (excluding free churches);A Protestant free church;The Roman Catholic church;Another Christian denomination;Another non-Christian denomination;No religious affiliation;Refused;No answer</td>
-        </tr>
-        <tr>
-          <td>v580</td>
-          <td>SCALE OF RELIGIOUSNESS, RESPONDENT</td>
-          <td>Religion and world view</td>
-          <td>Would you describe yourself as more religious or more not religious? We have a scale for this. Where would you place yourself on this scale?</td>
-          <td>Not available;Not religious;Religious;No answer</td>
-        </tr>
-        <tr>
-          <td>v1504</td>
-          <td>RESPONDENT: NUMBER OF CHILDREN</td>
-          <td>ALLBUS-Demography: Children of the respondet</td>
-          <td>Do you have any children, and if so, how many?</td>
-          <td>Not available;No children;No answer</td>
-        </tr>
-      </tbody>
-    </table>
-    <p style="font-size: small;">Table 2: Example survey variables</p>
-
-    <p>
-      For the full trial data please visit the <a href="https://github.com/vadis-project/shared-task"
-        class="text-decoration-none">SV-Ident GitHub repository</a>.
-    </p>
-
-    <div style="overflow:hidden;  ">
-      <h2 class="mt-4">Evaluation</h2>
-      <p>
-        <strong>Task 1: </strong>
-
-        The variable detection task is evaluted using a standard F1-macro. You can use the evaluation script <a href="https://github.com/vadis-project/shared-task/evaluate.py">evaluate_task1.py</a> to check the performance of your model.
+      <p style="background-color:#f2f2f2; font-size: small; padding: 1%;">
+        (1) We shall focus on the data from respondents between the ages of 35 and 45 – a group which made substantial
+        decisions with respect to family planning.
+        (2) Of the 682 individuals in this group, 28.6% were Catholic, 29.7% Evangelical, 2.7% belonged to an
+        independent or other Christian community, and 2.5% to a non-Christian religious community, 36.2% of the
+        respondents were undenominational.
+        (3) The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10 (very
+        religious) and the number of their children reveals a clear connection.
       </p>
+      <!-- 
+      <table style="font-size: small;" class="table table-striped">
+        <thead>
+          <tr style="text-align: left;">
+            <th>doc_id</th>
+            <th>text</th>
+            <th>is_variable</th>
+            <th>variable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>4E1K1A-VQOXIJ</td>
+            <td>The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10
+              (very religious) and the number of their children reveals a clear connection.</td>
+            <td>1</td>
+            <td>[580-Yes,1504-Yes,454-No,623-No]</td>
+          </tr>
+          <tr>
+            <td>4E1K1A-VQOXIJ</td>
+            <td>The average number of children ranges from 1.44 for respondents who characterized themselves as
+              non-religious to 1.9 for those who considered themselves very religious.</td>
+            <td>0</td>
+            <td>NoSkip</td>
+          </tr>
+          <tr>
+            <td>4E1K1A-VQOXIJ</td>
+            <td>The rise is clear but not continuous.</td>
+            <td>0</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table> -->
+
       <p>
-        <strong>Task 2: </strong>
+        In the example, sentence (1) does not contain a variable mention while sentences (2) and (3) contain the
+        variables [v732] and [v580, v1504], respectively.
+        The variable data is also provided in Table 2.
+      </p>
 
-        The variable disambiguation task will be evaluted using metrics commonly used in information retrieval and multi-label text classification.
-        These include: Precision@k, Recall@k, R-precision, and Mean Average Precision (MAP).
-        <!-- We will use <a href="https://opennir.net/metrics.html">OpenNIR</a> for R-precision and <a href="https://github.com/cvangysel/pytrec_eval">pytrec_eval</a> for the remaining metrics. -->
-
-
-      You can use the evaluation script <a href="https://github.com/vadis-project/shared-task/evaluate.py">evaluate_task2.py</a> (which uses the <a
-      href="https://github.com/terrierteam/ir_measures">ir_measures</a> tool) to
-      check the performance of your model on the metrics.
-
-      <h2 class="mt-4">Submission</h2>
-
-      <h4 class="mt-4">Rules:</h4>
-
-      <ol>
-        <li>Provide a self-contained jupyter notebook (can be hosted on Colab, Binder, Kaggle, or any other platform)
-          which can be executed to produce the submitted results.</li>
-        <li>Submit the submission file `run.json` for each task in the format described below.</li>
-        <li>You are allowed to use external data, but must either make the trained model available or provide a script to train the model (including any external data).</li>
-      </ol>
-
-      <h4 class="mt-4">Format:</h4>
-
-      The submissions should have the following JSON formats:
-
-      <h5 class="mt-4">Task 1</h5>
+      <table style="font-size: small;" class="table table-striped">
+        <thead>
+          <tr style="text-align: left;">
+            <th>id</th>
+            <th>label</th>
+            <th>topic</th>
+            <th>question</th>
+            <th>answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>v732</td>
+            <td>RESPONDENT: RELIGIOUS DENOMINATION E</td>
+            <td>ALLBUS-Demography: Details about the respondent</td>
+            <td>May I ask you what religion you belong to? </td>
+            <td>The German Protestant church (excluding free churches);A Protestant free church;The Roman Catholic
+              church;Another Christian denomination;Another non-Christian denomination;No religious
+              affiliation;Refused;No answer</td>
+          </tr>
+          <tr>
+            <td>v580</td>
+            <td>SCALE OF RELIGIOUSNESS, RESPONDENT</td>
+            <td>Religion and world view</td>
+            <td>Would you describe yourself as more religious or more not religious? We have a scale for this. Where
+              would you place yourself on this scale?</td>
+            <td>Not available;Not religious;Religious;No answer</td>
+          </tr>
+          <tr>
+            <td>v1504</td>
+            <td>RESPONDENT: NUMBER OF CHILDREN</td>
+            <td>ALLBUS-Demography: Children of the respondet</td>
+            <td>Do you have any children, and if so, how many?</td>
+            <td>Not available;No children;No answer</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size: small;">Table 2: Example survey variables</p>
 
       <p>
-        For Task 1, the key is the document ID and the value represents whether the sentence with the document id has a variable mention (1) or not (0).</p>
+        For the full trial data please visit the <a href="https://github.com/vadis-project/shared-task"
+          class="text-decoration-none">SV-Ident GitHub repository</a>.
+      </p>
 
-      <div class="column lefter3">
+      <div style="overflow:hidden;  ">
+        <h2 class="mt-4">Evaluation</h2>
+        <p>
+          <strong>Task 1: </strong>
 
-        Schema:
+          The variable detection task is evaluted using a standard F1-macro. You can use the evaluation script <a
+            href="https://github.com/vadis-project/shared-task/evaluate.py">evaluate_task1.py</a> to check the
+          performance of your model.
+        </p>
+        <p>
+          <strong>Task 2: </strong>
 
-        <pre style="background-color:#f2f2f2; font-size: small;">
+          The variable disambiguation task will be evaluted using metrics commonly used in information retrieval and
+          multi-label text classification.
+          These include: Precision@k, Recall@k, R-precision, and Mean Average Precision (MAP).
+          <!-- We will use <a href="https://opennir.net/metrics.html">OpenNIR</a> for R-precision and <a href="https://github.com/cvangysel/pytrec_eval">pytrec_eval</a> for the remaining metrics. -->
+
+
+          You can use the evaluation script <a
+            href="https://github.com/vadis-project/shared-task/evaluate.py">evaluate_task2.py</a> (which uses the <a
+            href="https://github.com/terrierteam/ir_measures">ir_measures</a> tool) to
+          check the performance of your model on the metrics.
+
+        <h2 class="mt-4">Submission</h2>
+
+        <h4 class="mt-4">Rules:</h4>
+
+        <ol>
+          <li>Provide a self-contained jupyter notebook (can be hosted on Colab, Binder, Kaggle, or any other platform)
+            which can be executed to produce the submitted results.</li>
+          <li>Submit the submission file `run.json` for each task in the format described below.</li>
+          <li>You are allowed to use external data, but must either make the trained model available or provide a script
+            to train the model (including any external data).</li>
+        </ol>
+
+        <h4 class="mt-4">Format:</h4>
+
+        The submissions should have the following JSON formats:
+
+        <h5 class="mt-4">Task 1</h5>
+
+        <p>
+          For Task 1, the key is the document ID and the value represents whether the sentence with the document id has
+          a variable mention (1) or not (0).</p>
+
+        <div class="column lefter3">
+
+          Schema:
+
+          <pre style="background-color:#f2f2f2; font-size: small;">
               <code>
               {
                 'DOC_ID': 'LABEL',
               }</code>
             </pre>
-      </div>
-      <div class="column side3">
+        </div>
+        <div class="column side3">
 
-        Example:
-        <pre style="background-color:#f2f2f2; font-size: small;">
+          Example:
+          <pre style="background-color:#f2f2f2; font-size: small;">
         <code>
               {
                 '17': '1',
@@ -525,19 +546,20 @@
               }
         </code>
       </pre>
-      </div>
+        </div>
 
-      <h5 class="mt-4">Task 2</h5>
+        <h5 class="mt-4">Task 2</h5>
 
-      <p>
-        For Task 2, the first key is the document ID, the second key the variable ID, and the value the similarity score
-        (lower is more similar) for the variable to the document.</p>
+        <p>
+          For Task 2, the first key is the document ID, the second key the variable ID, and the value the similarity
+          score
+          (lower is more similar) for the variable to the document.</p>
 
 
-      <div class="column lefter3">
+        <div class="column lefter3">
 
-        Schema:
-        <pre style="background-color:#f2f2f2; font-size: small;" class="json">
+          Schema:
+          <pre style="background-color:#f2f2f2; font-size: small;" class="json">
                 <code>
                 {
                   'DOC_ID': {
@@ -545,11 +567,11 @@
                   },
                 }</code>
               </pre>
-      </div>
-      <div class="column side3">
+        </div>
+        <div class="column side3">
 
-        Example:
-        <pre style="background-color:#f2f2f2;" class="python">
+          Example:
+          <pre style="background-color:#f2f2f2;" class="python">
                         <code>
                 {
                   '17': {
@@ -567,24 +589,25 @@
                   ...
                 }</code>
               </pre>
-        </pre>
+          </pre>
+        </div>
+
+
+
+
       </div>
+
+
+
+      <h2 class="mt-4">Organizers</h2>
+
+      <p>This task is organized by members of the <a href="https://vadis-project.github.io/">VAriable Detection,
+          Interlinking and Summarization (VADIS)</a> project.</p>
 
 
 
 
     </div>
-
-
-
-    <h2 class="mt-4">Organizers</h2>
-
-    <p>This task is organized by members of the <a href="https://vadis-project.github.io/">VAriable Detection, Interlinking and Summarization (VADIS)</a> project.</p>
-
-
-
-
-
 
   </div>
 
