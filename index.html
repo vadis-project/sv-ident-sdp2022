@@ -141,8 +141,9 @@
   <h1>Survey Variable Identification
     in Social Science Publications</h1>
 
-  <p class="lead">Scholarly Document Processing 2022</p>
-
+  <!-- <p class="lead">3rd Workshop on Scholarly Document Processing at COILING 2022 </p> -->
+  <p class="lead"><a href="https://sdproc.org/2022/">3rd Workshop on Scholarly Document Processing</a> at <a href="https://coling2022.org/">COLING 2022</a></p>
+  
 
 
   <div style="overflow:hidden; margin: 2%; ">
@@ -151,23 +152,18 @@
 
 
       <p>
-        Social sciences literature often use and reference survey dataset. Typically, a survey dataset has hundreds of
-        items or questions called
-        as <i>survey variables</i>. Social sciences papers only focus
-        on specific set of these variables. In order to establish links between
-        data and publications on a fine-grained level it is therefore
-        necessary to link not only on study name level but also on
-        the level of survey variables.
+        Social science literature often use and reference survey datasets. Typically, a survey dataset has hundreds of
+        items or questions, called <i>survey variables</i>. Studies may only focus and reference a specific subset of these variables. 
+        While survey datasets that are used in a publication are typically referenced explicitly in-text using a bibliographic citation, 
+        individual survey variables are often only referenced ambiguously (four examples are shown in Table 1; see the <a href="https://github.com/vadis-project/shared-task/"
+        class="text-decoration-none">annotation guideline v1</a> for more examples).
+        <!-- Furthermore, survey variables in one language may be referenced in a publication of another language. -->
+        This lack of explicit linking between individual survey variables and publications limits aggregate analyses and makes comparing different studies non-trivial.
+        Automatic methods for detecting and linking survey variables can be used to solve this problem.
+        Initial baselines show promising results, however, challenges remain.
+        <!-- such as the availability of datasets and the growing number of variables. -->
+        <!-- To this end, we present a new dataset of survey variable mentions.  -->
       </p>
-      <p>
-        While a survey dataset that is used in a scientific publication is typically referenced explicitly in-text using
-        a bibliographic citation (e.g., Author et al.),
-        individual survey items or questions, also called <i>survey variables</i>, are often only referenced
-        ambiguously.
-        For example, a survey variable may be referenced in many different ways. Below we only list four types of
-        references (please see the <a href="https://github.com/vadis-project/shared-task/"
-          class="text-decoration-none">annotation guideline v1</a> for more examples).
-        Example references:</p>
       <table class="table table-striped fonts small">
         <thead>
           <tr>
@@ -208,35 +204,37 @@
           </tr>
         </tbody>
       </table>
+      <p style="font-size: small;">Table 1: Example survey variable mentions</p>
     </div>
-    <img class="column side" alt="My Image" src="var_link_schema.png" />
-    <p class="column side" style="font-size: small;">Figure 1: Linking Survey Variable Mentions in Scientific
-      Publications</p>
 
+    <img class="column side" alt="My Image" src="var_link_schema.png" />
+    <p class="column side" style="font-size: small;">Figure 1: Example of linked survey variable mentions in scientific publications</p>
 
   </div>
   <div style="overflow:hidden;  margin: 2%;">
     <div class="container column lefter2">
 
       <p>
-        In this task, a set of variables of a particular
-        survey and a set sentences from social sciences publications are given and all relevant mentions that refer to
-        one
-        of
-        these variables are expected to be identified. This task splits into two sub-tasks:
-
-
+        For this shared task, a system should be built that can identify all relevant variables from English and 
+        German social science publications given a set of variables and sentences (including their contexts).
+        The shared task is split into two sub-tasks:
       </p>
 
       <p>
-        <strong class="d-inline-block mb-2 text-primary">Task 1 - Variable Detection:</strong> identifying whether the
+        <strong class="d-inline-block mb-2 text-primary">Task 1 - Variable Detection:</strong> identifying whether a
         sentence contains a variable mention or not.
       </p>
       <p>
         <strong class="d-inline-block mb-2 text-primary">Task 2 - Variable Disambiguation:</strong> identifying which
-        variable from the vocabulary is specifically mentioned in a certain sentence.
+        variable from a given vocabulary is mentioned in a sentence.
       </p>
-      <h5 class="mt-4">Examples</h5>
+      
+      <p>
+        Initially, we release a trial dataset, which contains 1227 instances for English and German survey variable mentions.
+        Afterwards, we will release the core dataset (see the timeline below for details).
+      </p>
+
+      <!-- <h5 class="mt-4">Examples</h5>
       <p>
         In text fragment 1, there are sentences from different social sciences publications. Sentence-1 Authors
         paraphrases a varible, v278, which is shown in the Figure 2 in . In <strong>Task-1</strong>, the sentence 1 is classified as variable
@@ -326,13 +324,15 @@
       </xmp>
       <p style="font-size: small;">Figure 2: Sample Survey Variables</p>
 
-    </div>
+    </div> -->
+
+
     <h2 class="mt-4">Announcements</h2>
 
-    <p> <strong>20.01.2022:</strong> Website is up. </p>
+    <p> <strong>16.03.2022:</strong> Trial data is released </p>
+    <p> <strong>22.11.2021:</strong> Workshop is accepted </p>
 
-
-
+    
     <h2 class="mt-4">Important Dates</h2>
     <table class="table table-striped">
       <thead>
@@ -374,7 +374,16 @@
     </table>
 
     <h2 class="mt-4">Data</h2>
+    The dataset is made up of the sentences with and without survey variable 
+    mentions (with their respective variable labels) and a vocabulary of survey variables.
+    An example context of three sentences is shown below.
 
+    <p style="background-color:#f2f2f2; font-size: small; padding: 1%;">
+    (1) We shall focus on the data from respondents between the ages of 35 and 45 – a group which made substantial decisions with respect to family planning. 
+    (2) Of the 682 individuals in this group, 28.6% were Catholic, 29.7% Evangelical, 2.7% belonged to an independent or other Christian community, and 2.5% to a non-Christian religious community, 36.2% of the respondents were undenominational. 
+    (3) The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10 (very religious) and the number of their children reveals a clear connection.
+    </p>
+<!-- 
     <table style="font-size: small;" class="table table-striped">
       <thead>
         <tr style="text-align: left;">
@@ -406,8 +415,12 @@
           <td>No</td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
 
+    <p>
+      In the example, sentence (1) does not contain a variable mention while sentences (2) and (3) contain the variables [v732] and [v580, v1504], respectively.
+      The variable data is also provided in Table 2.
+    </p>
 
     <table style="font-size: small;" class="table table-striped">
       <thead>
@@ -421,37 +434,32 @@
       </thead>
       <tbody>
         <tr>
-          <td>veastwest</td>
-          <td>REGION OF INTERVIEW: WEST - EAST</td>
-          <td>Identification variables</td>
-          <td>Does this interview take place on the territory of the old Federal Republic (incl. West Berlin) or on
-            the territory of the former GDR (incl. East Berlin)?</td>
-          <td>Respondents from the old federal states / interview on the territory of the old Federal Republic
-            (incl. West Berlin) ; Respondents from the new federal states / interview on the territory of the former
-            GDR (incl. East Berlin)</td>
+          <td>v732</td>
+          <td>RESPONDENT: RELIGIOUS DENOMINATION E</td>
+          <td>ALLBUS-Demography: Details about the respondent</td>
+          <td>May I ask you what religion you belong to?	</td>
+          <td>The German Protestant church (excluding free churches);A Protestant free church;The Roman Catholic church;Another Christian denomination;Another non-Christian denomination;No religious affiliation;Refused;No answer</td>
         </tr>
         <tr>
-          <td>v16</td>
-          <td>SATISFACTION WITH PERFORMANCE OF FED.GOV</td>
-          <td>Political attitudes and participation</td>
-          <td>How satisfied are you - on the whole - with the current performance of the German government?</td>
-          <td>Not available;Very satisfied;Fairly satisfied;Somewhat satisfied;Somewhat dissatisfied;Fairly
-            dissatisfied;Very dissatisfied;Don't know;No answer</td>
+          <td>v580</td>
+          <td>SCALE OF RELIGIOUSNESS, RESPONDENT</td>
+          <td>Religion and world view</td>
+          <td>Would you describe yourself as more religious or more not religious? We have a scale for this. Where would you place yourself on this scale?</td>
+          <td>Not available;Not religious;Religious;No answer</td>
         </tr>
         <tr>
-          <td>v18</td>
-          <td>SATISFACTION WITH DEMOCRACY IN THE FRG</td>
-          <td>Political attitudes and participation</td>
-          <td>Let's turn to democracy in Germany : Generally speaking how satisfied are you with democracy as
-            practiced in Germany ?</td>
-          <td>Not available;Very satisfied;Fairly satisfied;Somewhat satisfied;Somewhat dissatisfied;Fairly
-            dissatisfied;Very dissatisfied;Don't know;No answer</td>
+          <td>v1504</td>
+          <td>RESPONDENT: NUMBER OF CHILDREN</td>
+          <td>ALLBUS-Demography: Children of the respondet</td>
+          <td>Do you have any children, and if so, how many?</td>
+          <td>Not available;No children;No answer</td>
         </tr>
       </tbody>
     </table>
+    <p style="font-size: small;">Table 2: Example survey variables</p>
 
     <p>
-      For the full development data please visit the <a href="https://github.com/vadis-project/shared-task"
+      For the full trial data please visit the <a href="https://github.com/vadis-project/shared-task"
         class="text-decoration-none">SV-Ident GitHub repository</a>.
     </p>
 
@@ -460,22 +468,19 @@
       <p>
         <strong>Task 1: </strong>
 
-        The variable detection task is evaluted using a standard F1-macro.
+        The variable detection task is evaluted using a standard F1-macro. You can use the evaluation script <a href="https://github.com/vadis-project/shared-task/evaluate.py">evaluate_task1.py</a> to check the performance of your model.
       </p>
       <p>
         <strong>Task 2: </strong>
 
-        The variable disambiguation task will be evaluted using metrics commonly used in information retrieval and
-        eXtreme Multi-label text Classification (XMC).
-        These include: Precision@k, Recall@k, R-precision, and MAP.
+        The variable disambiguation task will be evaluted using metrics commonly used in information retrieval and multi-label text classification.
+        These include: Precision@k, Recall@k, R-precision, and Mean Average Precision (MAP).
         <!-- We will use <a href="https://opennir.net/metrics.html">OpenNIR</a> for R-precision and <a href="https://github.com/cvangysel/pytrec_eval">pytrec_eval</a> for the remaining metrics. -->
-        We use (<a href="https://opennir.net/metrics.html">OpenNIR</a>, <a
-          href="https://github.com/terrierteam/ir_measures">ir_measures</a>, <a
-          href="https://github.com/joaopalotti/trectools">trectools</a>) to compute all metrics.
-      </p>
 
-      You can use the evaluation script (<a href="https://github.com/vadis-project/shared-task">evaluate.py</a>) to
-      check the performance of your model on a diverse set of metrics.
+
+      You can use the evaluation script <a href="https://github.com/vadis-project/shared-task/evaluate.py">evaluate_task2.py</a> (which uses the <a
+      href="https://github.com/terrierteam/ir_measures">ir_measures</a> tool) to
+      check the performance of your model on the metrics.
 
       <h2 class="mt-4">Submission</h2>
 
@@ -484,17 +489,18 @@
       <ol>
         <li>Provide a self-contained jupyter notebook (can be hosted on Colab, Binder, Kaggle, or any other platform)
           which can be executed to produce the submitted results.</li>
-        <li>Submit the submission file(s) (described below)</li>
-        <li>You are allowed to use external data, but must make available the trained model or provide a script and
-          the data to train the model.</li>
+        <li>Submit the submission file `run.json` for each task in the format described below.</li>
+        <li>You are allowed to use external data, but must either make the trained model available or provide a script to train the model (including any external data).</li>
       </ol>
 
-      The submissions should have the following format:
+      <h4 class="mt-4">Format:</h4>
+
+      The submissions should have the following JSON formats:
 
       <h5 class="mt-4">Task 1</h5>
 
-      <p>The first key is the document ID and the second key represents the sentence has a variable mention as 1,
-        otherwise 0. </p>
+      <p>
+        For Task 1, the key is the document ID and the value represents whether the sentence with the document id has a variable mention (1) or not (0).</p>
 
       <div class="column lefter3">
 
@@ -523,7 +529,8 @@
 
       <h5 class="mt-4">Task 2</h5>
 
-      <p>The first key is the document ID, the second key the variable ID, and the value the similarity score
+      <p>
+        For Task 2, the first key is the document ID, the second key the variable ID, and the value the similarity score
         (lower is more similar) for the variable to the document.</p>
 
 
@@ -572,7 +579,7 @@
 
     <h2 class="mt-4">Organizers</h2>
 
-    <p>This task is organized by the VAriable Detection, Interlinking and Summarization (VADIS) project.</p>
+    <p>This task is organized by members of the <a href="https://vadis-project.github.io/">VAriable Detection, Interlinking and Summarization (VADIS)</a> project.</p>
 
 
 
