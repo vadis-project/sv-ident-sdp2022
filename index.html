@@ -140,7 +140,6 @@
   <h1>Survey Variable Identification
     in Social Science Publications</h1>
 
-  <!-- <p class="lead">3rd Workshop on Scholarly Document Processing at COILING 2022 </p> -->
   <p class="lead"><a href="https://sdproc.org/2022/">3rd Workshop on Scholarly Document Processing</a> at <a
       href="https://coling2022.org/">COLING 2022</a></p>
 
@@ -158,15 +157,12 @@
         While survey datasets that are used in a publication are typically referenced explicitly in-text using a
         bibliographic citation,
         individual survey variables are often only referenced ambiguously (four examples are shown in Table 1; see the
-        <a href="https://github.com/vadis-project/sv-ident/" class="text-decoration-none">annotation guideline v1</a>
+        <a href="https://github.com/vadis-project/sv-ident/" class="text-decoration-none">GitHub repository</a>
         for more examples).
-        <!-- Furthermore, survey variables in one language may be referenced in a publication of another language. -->
         This lack of explicit linking between individual survey variables and publications limits aggregate analyses and
         makes comparing different studies non-trivial.
         Automatic methods for detecting and linking survey variables can be used to solve this problem.
         Initial baselines show promising results, however, challenges remain.
-        <!-- such as the availability of datasets and the growing number of variables. -->
-        <!-- To this end, we present a new dataset of survey variable mentions.  -->
       </p>
       <table class="table table-striped fonts small">
         <thead>
@@ -239,98 +235,7 @@
         mentions.
         Afterwards, we will release the core dataset (see the timeline below for details).
       </p>
-
-      <!-- <h5 class="mt-4">Examples</h5>
-      <p>
-        In text fragment 1, there are sentences from different social sciences publications. Sentence-1 Authors
-        paraphrases a varible, v278, which is shown in the Figure 2 in . In <strong>Task-1</strong>, the sentence 1 is classified as variable
-        mentioned (1). On the
-        other hand, since there is no variable mention in Sentence-2, it is classified as not variable mentioned(0).
-        Sentence-3
-        summarizes more than one variable in a single sentence the Allbus variables v274, v275, v276 and v277.
-        Therefore, Sentence-3
-        is classified as variable mentioned (1).
-
-      </p>
-      <p>
-        <strong>Task-2</strong> focuses on sentences which mentions variables, these are Sentence-1 and Sentence-3 in our example. For
-        Sentence-1, it is
-        expected to find the specific variable, v278, which mentioned in the sentence. If a sentence mentiones more than
-        one
-        variable, all mentioned variables need to be finded. For example, Sentence-3 can be linked to the Allbus
-        variables v274, v275, v276 and v277
-        All of them have a common main question Do you have any personal
-        contact with foreigners living in Germany? but differ in their respective subquestions, e.g., ...at work?, ...in
-        your neighborhood?
-        etc.
-
-      </p> -->
     </div>
-
-    <!--  <div class="container column side2">
-
-      <p style="background-color:#f2f2f2; font-size: small; padding: 3%;">
-        Results of more recent public opinion such as the
-        Allbus Survey conducted in 2006 show that the majority of Germans continue to reject the idea of generally
-        granting dual citizenship(1).
-        The policy shift is partly due to steadily declining immigration to Germany(2). Encounters between Germans and
-        foreigners can
-        take place in different spheres of life, at work, in
-        the neighborhood, in the family or in the circle of
-        friends and acquaintances. (3)
-
-      </p>
-      <p style="font-size: small;">Text Fragment 1: Sample Sentences From Publications</p>
-
-      <xmp style="background-color:#f2f2f2; font-size: x-small; ">
-        v_id: v278
-        lang: English
-        survey: ALLBUS_cumulated
-        v_label: OPINION ON DUAL CITIZENSHIP
-        v_topic: Ethnocentrism and Minorities
-        v_question: Using the scale on the card,
-        please indicate the extent to which you
-        agree with each statement.
-        v_subquestion: Foreigners living in Germany
-        should be able to acquire German citizenship
-        without having to give up their own
-        citizenship, dual citizenship should be
-        possible.
-        v_answer a_id="1": Not available
-        ...
-      
-        variable v_id: v274
-        v_label: FOREIGN.,GUEST W.: CONTACT IN OWN FAMILY
-        v_topic: Ethnocentrism and Minorities
-        v_question: Do you have any personal contact with foreigners
-        living in Germany? Specifically...
-        v_subquestion: ...in your own family or close family circle?
-
-        v_id: "v275"
-        v_label: FOREIGN.,GUEST W.: CONTACT AT WORK
-        v_topic: Ethnocentrism and Minorities
-        v_question: Do you have any personal contact with foreigners 
-        living in Germany? Specifically...
-        v_subquestion: ...at work?
-
-        v_id="v276"
-        v_label: FOREIGN.,GUEST W.:CONTACT I.NEIGHBORHOOD
-        v_topic: Ethnocentrism and Minorities
-        v_question: Do you have any personal contact with foreigners 
-        living in Germany? Specifically...
-        v_subquestion: ...in your neighborhood?
-
-        v_id="v277"
-        v_label: FOREIGN.,GUEST W.: CONTACT AMONG FRIENDS
-        v_topic: Ethnocentrism and Minorities
-        v_question: Do you have any personal contact with foreigners 
-        living in Germany? Specifically...
-        v_subquestion: ...among your other friends and acquaintances?
-
-      </xmp>
-      <p style="font-size: small;">Figure 2: Sample Survey Variables</p>
-
-    </div> -->
 
     <div class="container column">
 
@@ -350,23 +255,27 @@
         </thead>
         <tbody>
           <tr>
+            <td>Trial Set Release</td>
+            <td>March 16, 2022</td>
+          </tr>
+          <tr>
             <td>Training Set Release</td>
-            <td>TBA</td>
+            <td>May 15, 2022</td>
           </tr>
           <tr>
             <td>Deadline for Registration</td>
-            <td>TBA</td>
+            <td>June 8, 2022</td>
           </tr>
           <tr>
             <td>Test Set Release (Blind)</td>
-            <td>TBA</td>
+            <td>June 15, 2022</td>
           </tr>
           <tr>
             <td>System Runs Due</td>
-            <td>TBA</td>
+            <td>June 22, 2022</td>
           </tr>
           <tr>
-            <td>Workshop Papers Due Date</td>
+            <td>Workshop Papers Due</td>
             <td>July 11, 2022</td>
           </tr>
           <tr>
@@ -394,39 +303,6 @@
         (3) The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10 (very
         religious) and the number of their children reveals a clear connection.
       </p>
-      <!-- 
-      <table style="font-size: small;" class="table table-striped">
-        <thead>
-          <tr style="text-align: left;">
-            <th>doc_id</th>
-            <th>text</th>
-            <th>is_variable</th>
-            <th>variable</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>4E1K1A-VQOXIJ</td>
-            <td>The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10
-              (very religious) and the number of their children reveals a clear connection.</td>
-            <td>1</td>
-            <td>[580-Yes,1504-Yes,454-No,623-No]</td>
-          </tr>
-          <tr>
-            <td>4E1K1A-VQOXIJ</td>
-            <td>The average number of children ranges from 1.44 for respondents who characterized themselves as
-              non-religious to 1.9 for those who considered themselves very religious.</td>
-            <td>0</td>
-            <td>NoSkip</td>
-          </tr>
-          <tr>
-            <td>4E1K1A-VQOXIJ</td>
-            <td>The rise is clear but not continuous.</td>
-            <td>0</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table> -->
 
       <p>
         In the example, sentence (1) does not contain a variable mention while sentences (2) and (3) contain the
@@ -493,8 +369,6 @@
           The variable disambiguation task will be evaluted using metrics commonly used in information retrieval and
           multi-label text classification.
           These include: Precision@k, Recall@k, R-precision, and Mean Average Precision (MAP).
-          <!-- We will use <a href="https://opennir.net/metrics.html">OpenNIR</a> for R-precision and <a href="https://github.com/cvangysel/pytrec_eval">pytrec_eval</a> for the remaining metrics. -->
-
 
           You can use the evaluation script <a
             href="https://github.com/vadis-project/sv-ident/blob/main/scripts/evaluate_task2.py">evaluate_task2.py</a> (which uses the <a
@@ -591,32 +465,16 @@
               </pre>
           </pre>
         </div>
-
-
-
-
       </div>
-
-
 
       <h2 class="mt-4">Organizers</h2>
 
       <p>This task is organized by members of the <a href="https://vadis-project.github.io/">VAriable Detection,
           Interlinking and Summarization (VADIS)</a> project.</p>
 
-
-
-
     </div>
 
   </div>
-
-
-
-
-
-
-
 
   <div class="row">
 
