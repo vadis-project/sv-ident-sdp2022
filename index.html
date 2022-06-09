@@ -241,7 +241,8 @@
 
       <h2 class="mt-4">Announcements</h2>
 
-      <p> <strong>16.03.2022:</strong> Trial data is released </p>
+      <p> <strong>08.06.2022:</strong> <a href="https://github.com/vadis-project/sv-ident/tree/main/data/train">Training data</a> is released</p>
+      <p> <strong>16.03.2022:</strong> <a href="https://github.com/vadis-project/sv-ident/tree/main/data/trial">Trial data</a> is released </p>
       <p> <strong>22.11.2021:</strong> Workshop is accepted </p>
 
       <h2 class="mt-4">Contact</h2>
@@ -298,18 +299,14 @@
       An example context of three sentences is shown below.</p>
 
       <p style="background-color:#f2f2f2; font-size: small; padding: 1%;">
-        (1) We shall focus on the data from respondents between the ages of 35 and 45 – a group which made substantial
-        decisions with respect to family planning.
-        (2) Of the 682 individuals in this group, 28.6% were Catholic, 29.7% Evangelical, 2.7% belonged to an
-        independent or other Christian community, and 2.5% to a non-Christian religious community, 36.2% of the
-        respondents were undenominational.
-        (3) The juxtaposition of the respondents’ estimation of their own religiosity from 1 (not religious) to 10 (very
-        religious) and the number of their children reveals a clear connection.
+        (1) A sense of vulnerability and insecurity could create a perception of unmet societal needs, and lead to a desire for increased welfare state interventions.
+        (2) In fact, our analyses show that net migration is significantly positively associated with a preference for greater welfare spending on health, pensions and unemployment.
+        (3) Our results challenge much conventional wisdom and many scholars and commentators.
       </p>
 
       <p>
-        In the example, sentence (1) does not contain a variable mention while sentences (2) and (3) contain the
-        variables [v732] and [v580, v1504], respectively.
+        In the example, sentences (1) and (3) do not contain variable mentions while sentence (2) contains the
+        variables <span style="background-color:#f2f2f2">[exploredata-ZA4700_Varv25;exploredata-ZA4700_Varv27;exploredata-ZA4700_Varv28]</span>.
         The variable data is also provided in Table 2.
       </p>
 
@@ -318,35 +315,36 @@
           <tr style="text-align: left;">
             <th>id</th>
             <th>label</th>
-            <th>topic</th>
             <th>question</th>
-            <th>answer</th>
+            <th>item</th>
+            <th>answers</th>
+            <th>topics</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>v732</td>
-            <td>RESPONDENT: RELIGIOUS DENOMINATION E</td>
-            <td>ALLBUS-Demography: Details about the respondent</td>
-            <td>May I ask you what religion you belong to? </td>
-            <td>The German Protestant church (excluding free churches);A Protestant free church;The Roman Catholic
-              church;Another Christian denomination;Another non-Christian denomination;No religious
-              affiliation;Refused;No answer</td>
+            <td>exploredata-ZA4700_Varv25</td>
+            <td>v25 - Q7a: Gov. responsibility: Provide job for everyone</td>
+            <td>Q.7 On the whole, do you think it should or should not be the government's responsibility to ...</td>
+            <td>Q.7a Government responsibility: Provide a job for everyone who wants one</td>
+            <td>Definitely should be;Probably should be;Probably should not be;Definitely should not be;Can't choose;No Answer;Don't know, no answer</td>
+            <td>Mass political behaviour, attitudes/opinion;Government, political systems and organisation;Social stratification and groupings;Economic policy</td>
           </tr>
           <tr>
-            <td>v580</td>
-            <td>SCALE OF RELIGIOUSNESS, RESPONDENT</td>
-            <td>Religion and world view</td>
-            <td>Would you describe yourself as more religious or more not religious? We have a scale for this. Where
-              would you place yourself on this scale?</td>
-            <td>Not available;Not religious;Religious;No answer</td>
+            <td>exploredata-ZA4700_Varv27</td>
+            <td>v27 - Q7c: Gov. responsibility: Provide health care for sick</td>
+            <td>Q.7 On the whole, do you think it should or should not be the government's responsibility to ...</td>
+            <td>Q.7c Government responsibility: Provide health care for the sick</td>
+            <td>Definitely should be;Probably should be;Probably should not be;Definitely should not be;Can't choose;No Answer;Don't know, no answer</td>
+            <td>Mass political behaviour, attitudes/opinion;Government, political systems and organisation;Social stratification and groupings;Economic policy</td>
           </tr>
           <tr>
-            <td>v1504</td>
-            <td>RESPONDENT: NUMBER OF CHILDREN</td>
-            <td>ALLBUS-Demography: Children of the respondet</td>
-            <td>Do you have any children, and if so, how many?</td>
-            <td>Not available;No children;No answer</td>
+            <td>exploredata-ZA4700_Varv27</td>
+            <td>v28 - Q7d: Gov. responsibility: Provide living standard for the old</td>
+            <td>Q.7 On the whole, do you think it should or should not be the government's responsibility to ...</td>
+            <td>Q.7d Government responsibility: Provide a decent standard of living for the old</td>
+            <td>Definitely should be;Probably should be;Probably should not be;Definitely should not be;Can't choose;No Answer;Don't know, no answer</td>
+            <td>Mass political behaviour, attitudes/opinion;Government, political systems and organisation;Social stratification and groupings;Economic policy</td>
           </tr>
         </tbody>
       </table>
