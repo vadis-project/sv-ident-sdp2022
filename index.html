@@ -393,14 +393,13 @@
         <p>
           <strong>Task 2: </strong>
 
-          The variable disambiguation task will be evaluated using metrics commonly used in information retrieval and
+          The variable disambiguation task will be evaluated using (Mean) Average Precision with a cutoff of 10 (MAP@10), which is a measure commonly used in information retrieval and
           multi-label text classification.
-          These include: Precision@k, Recall@k, R-precision, and Mean Average Precision (MAP).
 
           You can use the evaluation script <a
             href="https://github.com/vadis-project/sv-ident/blob/main/scripts/evaluate_task2.py">evaluate_task2.py</a>
           (which uses the <a href="https://github.com/cvangysel/pytrec_eval">pytrec_eval</a> tool) to
-          check the performance of your model on the different metrics.
+          check the performance of your model.
 
         <h2 class="mt-4">Submission</h2>
 
